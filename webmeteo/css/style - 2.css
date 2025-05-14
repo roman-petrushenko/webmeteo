@@ -1,0 +1,644 @@
+/* === Загальні скидання та базові стилі === */
+body, h1, h2, h3, h4, p, ul, li, form, fieldset, table, th, td, figure, figcaption, select, input, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #eef1f5; /* Світліший, спокійніший фон */
+    color: #333;
+    display: flex; /* Flex для притискання футера */
+    flex-direction: column; /* Основна вісь - вертикальна */
+    min-height: 100vh; /* Мінімальна висота на весь екран */
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px; /* Збільшено для сучасних екранів */
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px; /* Більш заокруглені кути */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    flex-grow: 1; /* Дозволяє main.container рости і займати місце */
+}
+
+/* === Загальні компоненти === */
+.button-primary {
+    padding: 10px 20px;
+    background-color: #007bff; /* Яскравий синій */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    font-size: 1em;
+}
+.button-primary:hover {
+    background-color: #0056b3;
+}
+.button-primary:active {
+    transform: scale(0.98);
+}
+
+.button-secondary {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Сірий */
+    color: white;
+    /* ... інші стилі аналогічно до primary ... */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.button-secondary:hover {
+    background-color: #545b62;
+}
+
+.card { /* Стиль для секцій, що виглядають як картки */
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.card h3 {
+    margin-bottom: 15px;
+    color: #0056b3; /* Темно-синій для заголовків карток */
+}
+
+/* === Header === */
+.site-header {
+    background-color: #343a40; /* Темно-сірий, майже чорний */
+    color: #fff;
+    padding: 15px 2.5%; /* 2.5% по боках для відступів */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.site-header .logo-container h1 {
+    font-size: 1.8em; /* Трохи зменшено для балансу */
+    margin: 0;
+    font-weight: 600;
+}
+.site-header .logo-container a, .site-header .main-nav .nav-list li a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.main-nav .nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav .nav-list li {
+    margin-left: 25px; /* Збільшено проміжок */
+}
+
+.main-nav .nav-list li a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav .nav-list li a:hover,
+.main-nav .nav-list li a:focus,
+.main-nav .nav-list li a.active-nav-link { /* Псевдоклас :hover та :focus */
+    background-color: #007bff; /* Яскравіший акцент при наведенні */
+    color: #fff;
+}
+
+#menu-toggle, #menu-toggle-archive, #menu-toggle-analytics { /* ID селектори для кнопок меню */
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px; /* Збільшено для кращого натискання */
+    cursor: pointer;
+}
+
+/* === Search Section (index.html) === */
+.search-section {
+    margin-bottom: 30px;
+    padding: 15px 0; /* Менше вертикального паддінгу */
+    display: flex; /* Для центрування форми */
+    justify-content: center;
+}
+
+#city-search-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px; /* Обмеження ширини пошуку */
+    align-items: center; /* Вирівнювання елементів по центру вертикально */
+}
+
+#city-search-form label {
+    font-weight: 500;
+    white-space: nowrap; /* Щоб текст не переносився */
+}
+
+#city-search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 12px; /* Збільшено паддінг для комфорту */
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1em;
+}
+#city-search-form input[type="text"]:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+
+#city-search-form button {
+    padding: 12px 22px; /* Збільшено паддінг */
+    background-color: #28a745; /* Зелений */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 1em;
+}
+#city-search-form button:hover {
+    background-color: #218838;
+}
+
+/* === Weather Display (index.html) === */
+.weather-display > h2 { /* Загальний заголовок секції погоди */
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Детальна поточна погода */
+.current-weather-detailed {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: grid; /* Grid для розташування іконки та деталей */
+    grid-template-columns: auto 1fr; /* Іконка займає скільки потрібно, решта - деталі */
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "heading heading"
+        "icon details";
+    gap: 15px 20px;
+    align-items: center;
+}
+.current-weather-detailed h3 {
+    grid-area: heading;
+    margin-bottom: 0; /* Заголовок вже має відступ від батька */
+    color: #17a2b8; /* Бірюзовий */
+    font-size: 1.4em;
+}
+.weather-icon-current-detailed {
+    grid-area: icon;
+    justify-self: center;
+}
+.weather-icon-current-detailed img {
+    width: 100px; /* Збільшено іконку */
+    height: 100px;
+}
+.weather-details-grid {
+    grid-area: details;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивні колонки */
+    gap: 10px 15px; /* Відступи між параграфами */
+}
+.weather-details-grid p {
+    margin-bottom: 0; /* Відступи керуються grid gap */
+    font-size: 1em;
+    background-color: #e9ecef; /* Легкий фон для кожного показника */
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.weather-details-grid p span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+/* Контроли прогнозу (7/10 днів) */
+.forecast-controls {
+    display: flex;
+    justify-content: flex-end; /* Керування справа */
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+.forecast-controls label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+#forecast-days-select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 0.95em;
+}
+
+/* Вкладки днів */
+.daily-tabs-nav {
+    margin-bottom: 20px;
+    overflow-x: auto; /* Дозволяє горизонтальний скрол, якщо вкладки не вміщаються */
+    -webkit-overflow-scrolling: touch; /* Плавний скрол на iOS */
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 8px;
+}
+.daily-tabs-list {
+    list-style: none;
+    display: flex; /* Розташування вкладок в ряд */
+    gap: 8px; /* Проміжок між вкладками */
+}
+.day-tab {
+    flex: 0 0 auto; /* Вкладки не розтягуються, не стискаються, ширина по контенту */
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+.day-tab:hover {
+    background-color: #f0f8ff; /* Світло-блакитний при наведенні */
+    border-color: #add8e6;
+}
+.day-tab.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+    font-weight: bold;
+    transform: translateY(-2px); /* Легкий підйом активної вкладки */
+    box-shadow: 0 4px 8px rgba(0,123,255,0.2);
+}
+.day-tab.active .day-tab-temp {
+    color: white; /* Переконатися, що текст температури білий на синьому фоні */
+}
+.day-tab span {
+    display: block;
+}
+.day-tab-date {
+    font-size: 0.9em;
+    margin-bottom: 4px;
+}
+.day-tab-icon {
+    width: 32px;
+    height: 32px;
+    margin: 4px auto;
+}
+.day-tab-temp {
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Погодинний прогноз */
+#hourly-forecasts-container .hourly-forecast-panel {
+    display: none; /* Всі панелі приховані за замовчуванням */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+#hourly-forecasts-container .hourly-forecast-panel.active {
+    display: block; /* Активна панель видима */
+}
+.hourly-forecast-date-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #17a2b8; /* Бірюзовий */
+    font-size: 1.3em;
+}
+.hourly-columns-grid {
+    display: grid;
+    /* Автоматично створювати колонки, що вміщаються, мінімальна ширина 90px */
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 15px 10px; /* Відстань між колонками та рядами */
+    overflow-x: auto; /* Якщо колонки все ж не вмістяться, буде скрол */
+    padding-bottom: 10px; /* Невеликий відступ знизу для скролбару */
+}
+.hour-column {
+    display: flex;
+    flex-direction: column; /* Елементи в колонці розташовані вертикально */
+    align-items: center; /* Центрування по горизонталі */
+    text-align: center;
+    padding: 10px 5px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+.hour-time {
+    font-weight: bold;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+.hour-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+.hour-temp {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #007bff;
+    margin-bottom: 3px;
+}
+.hour-precip {
+    font-size: 0.85em;
+    color: #555;
+}
+
+/* Налаштування відображення даних */
+.data-customization {
+    margin-top: 30px;
+    /* Використання стилю .card */
+}
+.data-customization fieldset {
+    border: none; /* Прибираємо стандартний бордер, бо є .card */
+    padding: 0;
+}
+.data-customization legend {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.data-customization label {
+    display: inline-flex; /* Для кращого вирівнювання чекбоксу та тексту */
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+.data-customization input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1); /* Трохи більші чекбокси */
+}
+
+/* --- Floating Elements (залишаємо для демонстрації, але краще інтегрувати в Grid/Flex макет) --- */
+/* Якщо вони дійсно потрібні як плаваючі, їх можна залишити, але це застарілий підхід для основного макету */
+.floating-promo, .floating-info, .floating-article {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+/* Для прикладу, якщо б ці блоки були частиною головного контенту, їх можна було б розмістити у Grid */
+
+
+/* === Сторінка Архіву (archive.html) === */
+.archive-page-container h2 { /* Заголовок сторінки архіву */
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+.archive-intro p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.05em;
+    color: #555;
+}
+
+.archive-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивні колонки для форми */
+    gap: 20px;
+    align-items: end; /* Вирівнювання по нижньому краю, щоб кнопка була на одному рівні */
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #495057;
+}
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fff;
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+.archive-form button[type="submit"] {
+    /* Стилі вже є від .button-primary, але можна додати специфічні */
+    grid-column: 1 / -1; /* Кнопка на всю ширину, якщо вона одна в ряду */
+    justify-self: center; /* Центрування кнопки, якщо вона не на всю ширину */
+    padding: 12px 30px;
+    margin-top: 10px; /* Відступ зверху, якщо елементи вирівняні по align-items:end */
+}
+
+.archive-results-section .results-placeholder {
+    text-align: center;
+    color: #6c757d;
+    padding: 30px;
+    border: 2px dashed #ced4da;
+    border-radius: 6px;
+}
+.archive-table {
+    width: 100%;
+    border-collapse: collapse; /* Об'єднання меж */
+    margin-top: 20px;
+}
+.archive-table th, .archive-table td {
+    border: 1px solid #dee2e6;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 0.95em;
+}
+.archive-table thead th {
+    background-color: #e9ecef;
+    font-weight: 600;
+    color: #495057;
+}
+.archive-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa; /* Чергування кольорів рядків */
+}
+.archive-table tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+
+/* === Footer === */
+.site-footer {
+    background-color: #343a40;
+    color: #adb5bd; /* Світліший сірий для тексту */
+    text-align: center;
+    padding: 25px 2.5%;
+    margin-top: auto; /* Притискає футер до низу, якщо контенту мало (завдяки flex на body) */
+    font-size: 0.9em;
+}
+.site-footer p {
+    margin-bottom: 8px;
+}
+.site-footer a {
+    color: #00aaff; /* Яскравіше посилання у футері */
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+.site-footer img {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+.site-footer img:hover {
+    opacity: 1;
+}
+
+
+/* === Допоміжні класи === */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* === Адаптивність === */
+@media (max-width: 992px) { /* Планшети і великі телефони */
+    .weather-details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .hourly-columns-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px 8px;
+    }
+    .archive-form {
+        grid-template-columns: 1fr; /* Форма архіву в одну колонку */
+    }
+    .archive-form button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) { /* Мобільні телефони */
+    .container {
+        padding: 15px;
+    }
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .site-header .logo-container {
+        margin-bottom: 10px;
+    }
+    #menu-toggle, #menu-toggle-archive, #menu-toggle-analytics { /* Показати кнопку меню */
+        display: block;
+        position: absolute; /* Для позиціонування відносно хедера */
+        top: 15px;
+        right: 15px;
+    }
+    .main-nav .nav-list {
+        display: none; /* Приховати меню */
+        flex-direction: column;
+        width: 100%;
+        background-color: #495057; /* Темніший фон для мобільного меню */
+        position: absolute; /* Позиціонування відносно .main-nav */
+        top: 100%; /* З'являється під кнопкою */
+        left: 0;
+        z-index: 1000; /* Поверх інших елементів */
+        border-top: 1px solid #343a40;
+    }
+    .main-nav .nav-list.active { /* Клас для показу меню */
+        display: flex;
+    }
+    .main-nav .nav-list li {
+        margin-left: 0;
+        width: 100%;
+    }
+    .main-nav .nav-list li a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #5a6268;
+    }
+    .main-nav .nav-list li:last-child a {
+        border-bottom: none;
+    }
+
+    #city-search-form {
+        flex-direction: column;
+        gap: 15px; /* Збільшено відступ для мобільного */
+        max-width: none; /* На всю ширину */
+    }
+    #city-search-form label {
+        align-self: flex-start; /* Лейбл зліва */
+    }
+    #city-search-form input[type="text"], #city-search-form button {
+        width: 100%;
+    }
+
+    .current-weather-detailed {
+        grid-template-columns: 1fr; /* Одна колонка на мобільних */
+        grid-template-areas:
+            "heading"
+            "icon"
+            "details";
+        text-align: center; /* Центрування іконки та тексту */
+    }
+    .weather-details-grid {
+        grid-template-columns: 1fr; /* Кожен параметр в окремому рядку */
+        text-align: left; /* Вирівнювання тексту в деталях */
+    }
+    .weather-icon-current-detailed img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .daily-tabs-list {
+        padding-left: 0; /* Прибрати можливий відступ у скрол-контейнері */
+    }
+    .day-tab {
+        padding: 10px 12px; /* Менші вкладки */
+    }
+    .hourly-columns-grid { /* Забезпечити горизонтальний скрол для годин */
+        display: flex; /* Переключення на flex для кращого скролу */
+        overflow-x: auto;
+        padding-bottom: 15px; /* Для скролбару */
+    }
+    .hour-column {
+        flex: 0 0 90px; /* Фіксована ширина колонки години */
+    }
+
+
+    /* Плаваючі елементи - на мобільних в одну колонку */
+    .floating-promo, .floating-info, .floating-article {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        position: static; /* Скидання позиціонування */
+    }
+}

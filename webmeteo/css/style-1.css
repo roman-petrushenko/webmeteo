@@ -1,0 +1,360 @@
+/* Загальні скидання стилів (дуже базові) */
+body, h1, h2, h3, p, ul, li, form, fieldset, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ключове для box model */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6; /* Світлий фон */
+    color: #333;
+    padding-bottom: 60px; /* Щоб футер не накладався */
+    position: relative; /* Для позиціонування футера */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto; /* Центрування та відступи */
+    padding: 20px;
+    background-color: #fff; /* Білий фон для контенту */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: #2c5d7c; /* Темно-синій для хедера */
+    color: #fff;
+    padding: 15px 5%; /* Відступи по боках */
+    display: flex; /* Використаємо flex для розташування лого та навігації */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+.site-header a { /* Стиль для посилань в хедері, якщо лого - посилання */
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav .nav-list {
+    list-style: none;
+    display: flex; /* Розташування пунктів меню в ряд */
+}
+
+.main-nav .nav-list li {
+    margin-left: 20px;
+}
+
+.main-nav .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .nav-list li a:hover,
+.main-nav .nav-list li a:focus { /* Псевдоклас :hover та :focus */
+    background-color: #1a3a4f;
+}
+
+#menu-toggle { /* Селектор ідентифікатора */
+    display: none; /* Приховано для десктопів, буде видно на мобільних */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --- Search Section --- */
+.search-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #e9f1f5; /* Світло-блакитний фон для секції пошуку */
+    border-radius: 6px;
+}
+
+.search-section form {
+    display: flex; /* Flex для розташування інпуту та кнопки */
+    gap: 10px; /* Проміжок між елементами */
+}
+
+.search-section label {
+    margin-right: 10px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.search-section input[type="text"] { /* Селектор з атрибутом */
+    flex-grow: 1; /* Інпут займає доступний простір */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-section button {
+    padding: 10px 20px;
+    background-color: #5cb85c; /* Зелений для кнопки */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+    background-color: #4cae4c;
+}
+
+/* --- Weather Display --- */
+.weather-display h2, .weather-display h3 {
+    color: #2c5d7c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e9f1f5;
+    padding-bottom: 10px;
+}
+
+.current-weather, .hourly-forecast, .daily-forecast, .data-customization {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.current-weather p {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+#current-weather-icon {
+    width: 80px; /* Розмір іконки */
+    height: 80px;
+    margin-bottom: 10px;
+    /* Для демонстрації плаваючого елемента всередині блоку */
+    float: right; /* Позиціонування іконки праворуч */
+    margin-left: 15px;
+}
+
+.current-weather::after { /* Псевдоелемент для очищення float */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.forecast-list {
+    list-style: none; /* Прибираємо стандартні маркери */
+}
+
+.forecast-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+.forecast-list li:last-child { /* Псевдоклас :last-child */
+    border-bottom: none;
+}
+.small-weather-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle; /* Вирівнювання іконки по вертикалі */
+    margin-right: 10px;
+}
+
+/* Data Customization Form */
+.data-customization fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+}
+.data-customization legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #337ab7;
+}
+.data-customization label {
+    display: block; /* Кожен лейбл з нового рядка */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.data-customization input[type="checkbox"] { /* Селектор з атрибутом */
+    margin-right: 8px;
+}
+
+/* --- Floating Elements (з HTML, для демонстрації) --- */
+.floating-promo {
+    /* float: right; width: 200px; ... вже в HTML для наочності */
+    /* Стилі для Box Model тут: */
+    padding: 15px;
+    border: 2px dashed #5cb85c; /* Зелена рамка */
+    margin: 0 0 15px 15px; /* Відступи */
+    background-color: #f0fff0;
+    position: relative; /* Для позиціонування ::before */
+    top: 10px; /* Зміщення вниз */
+}
+
+.floating-promo::before { /* Псевдоелемент */
+    content: "Акція!";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #5cb85c;
+    color: white;
+    padding: 2px 5px;
+    font-size: 0.8em;
+    border-radius: 3px;
+}
+
+
+.floating-info {
+    /* float: left; width: 150px; ... вже в HTML */
+    padding: 10px;
+    border: 1px solid #337ab7; /* Синя рамка */
+    margin: 0 15px 15px 0; /* Відступи */
+    background-color: #e7f3fe;
+    position: relative; /* Для позиціонування ::after */
+    left: -5px; /* Зміщення вліво */
+}
+
+.floating-info img {
+    display: block; /* Щоб margin auto працював для центрування */
+    margin: 10px auto 0;
+}
+
+.floating-article {
+    /* clear: both; ... вже в HTML */
+    padding: 20px;
+    border: 1px solid #777;
+    margin-top: 20px; /* Відступ зверху, щоб гарантовано очистити float */
+    background-color: #f9f9f9;
+    position: sticky; /* Приклад іншого позиціонування, буде "прилипати" при скролі, якщо батьківський контейнер дозволяє */
+    top: 10px; /* Відступ від верхньої межі при "прилипанні" */
+    z-index: 10; /* Щоб був поверх інших елементів при "прилипанні" */
+}
+
+
+/* Комбінатори */
+/* 1. Селектор нащадка (пробіл) */
+.weather-display article p {
+    color: #555; /* Колір тексту для параграфів всередині article в .weather-display */
+}
+
+/* 2. Дочірній селектор (>) */
+.site-header > .main-nav {
+    /* Стилі для .main-nav, який є прямим нащадком .site-header */
+    border-left: 1px solid #4a6e8a;
+    padding-left: 20px;
+}
+
+/* 3. Сусідній селектор (+) */
+.search-section h2 + form {
+    margin-top: 10px; /* Відступ для форми, яка йде одразу після h2 */
+}
+
+/* 4. Загальний сусідній селектор (~) */
+.current-weather h3 ~ p {
+    font-size: 0.95em; /* Стиль для всіх <p>, які є сусідами <h3> в .current-weather */
+    line-height: 1.5;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #333; /* Темний футер */
+    color: #bbb;
+    text-align: center;
+    padding: 20px 5%;
+    position: absolute; /* Позиціонування для притиснення до низу */
+    bottom: 0;
+    width: 100%; /* На всю ширину */
+    /* height: 60px;  Якщо потрібна фіксована висота */
+}
+
+.site-footer p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.site-footer a {
+    color: #7ac0ff; /* Світло-синій для посилань у футері */
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Клас для візуального приховування елементів, але доступності для скрін-рідерів */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Мобільні стилі (приклад) */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #menu-toggle {
+        display: block; /* Показати кнопку меню */
+        align-self: flex-end; /* Кнопка справа */
+        position: absolute;
+        top: 15px;
+        right: 5%;
+    }
+    .main-nav .nav-list {
+        display: none; /* Приховати меню за замовчуванням */
+        flex-direction: column;
+        width: 100%;
+        background-color: #3a6a8a; /* Фон для випадаючого меню */
+    }
+    .main-nav .nav-list.active { /* Клас для показу меню */
+        display: flex;
+    }
+    .main-nav .nav-list li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #4a7c9a;
+    }
+    .main-nav .nav-list li:last-child {
+        border-bottom: none;
+    }
+    .main-nav .nav-list li a {
+        display: block; /* Посилання на всю ширину */
+        padding: 15px;
+    }
+
+    .search-section form {
+        flex-direction: column; /* Елементи форми в стовпчик */
+    }
+    .search-section input[type="text"], .search-section button {
+        width: 100%; /* На всю ширину */
+    }
+    .search-section label {
+        margin-bottom: 5px;
+    }
+
+    .floating-promo, .floating-info {
+        float: none; /* Вимкнути float на малих екранах */
+        width: 100%; /* На всю ширину */
+        margin-left: 0;
+        margin-right: 0;
+        top: 0; /* Скинути позиціонування */
+        left: 0;
+    }
+    .floating-article {
+        position: static; /* Скинути sticky */
+    }
+}

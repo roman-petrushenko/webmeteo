@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebMeteo - Прогноз погоди</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <h1>WebMeteo</h1>
+        </div>
+        <nav class="main-nav">
+            <button id="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">≡</button>
+            <ul class="nav-list" id="nav-menu">
+                <li><a href="#settings" id="settings-link">Налаштування</a></li>
+                <li><a href="auth.html" id="auth-link">Вхід/Реєстрація</a></li>
+                <li><a href="archive.html">Архів</a></li>
+                <li><a href="analytics.html">Відділ аналітики</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="search-section" aria-labelledby="search-heading">
+            <h2 id="search-heading" class="visually-hidden">Пошук населеного пункту</h2>
+            <form id="city-search-form">
+                <label for="city-input">Введіть населений пункт:</label>
+                <input type="text" id="city-input" name="city" placeholder="Наприклад, Київ" required>
+                <button type="submit">Знайти</button>
+            </form>
+        </section>
+
+        <section class="weather-display" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Погода для <span id="current-city-display">Місто</span></h2>
+
+            <article class="current-weather-detailed" aria-labelledby="today-weather-detailed-heading">
+                <h3 id="today-weather-detailed-heading">Детально на Сьогодні</h3>
+                <div class="weather-icon-current-detailed">
+                    <img src="images/placeholder_icon_large.png" alt="Поточна погода детально" id="current-detailed-weather-icon">
+                </div>
+                <div class="weather-details-grid">
+                    <p>Температура: <span id="current-detailed-temp">--</span>°C</p>
+                    <p>Відчувається як: <span id="current-detailed-feels-like">--</span>°C</p>
+                    <p>Вологість: <span id="current-detailed-humidity">--</span>%</p>
+                    <p>Вітер: <span id="current-detailed-wind">--</span> м/с</p>
+                    <p>Ймовірність опадів: <span id="current-detailed-precipitation">--</span>%</p>
+                    <p>Індекс якості повітря (AQI): <span id="current-detailed-aqi">--</span></p>
+                    <p>Світанок: <span id="current-detailed-sunrise">--:--</span></p>
+                    <p>Захід сонця: <span id="current-detailed-sunset">--:--</span></p>
+                </div>
+            </article>
+
+            <div class="forecast-controls">
+                <label for="forecast-days-select">Прогноз на:</label>
+                <select id="forecast-days-select">
+                    <option value="7" selected>7 днів</option>
+                    <option value="10">10 днів</option>
+                </select>
+            </div>
+
+            <nav class="daily-tabs-nav" aria-label="Прогноз по днях">
+                <ul id="daily-tabs-container" class="daily-tabs-list">
+                    <li class="day-tab active" role="tab" aria-selected="true" aria-controls="hourly-forecast-panel-0" id="day-tab-0">
+                        <span class="day-tab-date">Сб, 11 Трав</span>
+                        <img src="images/placeholder_icon_small.png" alt="Погода" class="day-tab-icon">
+                        <span class="day-tab-temp">15°/8°</span>
+                    </li>
+                    <li class="day-tab" role="tab" aria-selected="false" aria-controls="hourly-forecast-panel-1" id="day-tab-1">
+                        <span class="day-tab-date">Нд, 12 Трав</span>
+                        <img src="images/placeholder_icon_small.png" alt="Погода" class="day-tab-icon">
+                        <span class="day-tab-temp">17°/9°</span>
+                    </li>
+                    </ul>
+            </nav>
+
+            <section id="hourly-forecasts-container" aria-live="polite">
+                <div class="hourly-forecast-panel active" role="tabpanel" id="hourly-forecast-panel-0" aria-labelledby="day-tab-0">
+                    <h4 class="hourly-forecast-date-heading">Погодинний прогноз для <span class="selected-date-hourly">Сб, 11 Травня</span></h4>
+                    <div class="hourly-columns-grid">
+                        <div class="hour-column">
+                            <span class="hour-time">00:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 00:00" class="hour-icon">
+                            <span class="hour-temp">9°C</span>
+                            <span class="hour-precip">10%</span>
+                        </div>
+                        <div class="hour-column">
+                            <span class="hour-time">03:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 03:00" class="hour-icon">
+                            <span class="hour-temp">8°C</span>
+                            <span class="hour-precip">5%</span>
+                        </div>
+                        <div class="hour-column">
+                            <span class="hour-time">06:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 06:00" class="hour-icon">
+                            <span class="hour-temp">8°C</span>
+                             <span class="hour-precip">5%</span>
+                        </div>
+                         <div class="hour-column">
+                            <span class="hour-time">09:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 09:00" class="hour-icon">
+                            <span class="hour-temp">11°C</span>
+                             <span class="hour-precip">0%</span>
+                        </div>
+                         <div class="hour-column">
+                            <span class="hour-time">12:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 12:00" class="hour-icon">
+                            <span class="hour-temp">14°C</span>
+                             <span class="hour-precip">0%</span>
+                        </div>
+                         <div class="hour-column">
+                            <span class="hour-time">15:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 15:00" class="hour-icon">
+                            <span class="hour-temp">15°C</span>
+                             <span class="hour-precip">0%</span>
+                        </div>
+                         <div class="hour-column">
+                            <span class="hour-time">18:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 18:00" class="hour-icon">
+                            <span class="hour-temp">13°C</span>
+                             <span class="hour-precip">10%</span>
+                        </div>
+                         <div class="hour-column">
+                            <span class="hour-time">21:00</span>
+                            <img src="images/placeholder_icon_tiny.png" alt="Погода о 21:00" class="hour-icon">
+                            <span class="hour-temp">10°C</span>
+                             <span class="hour-precip">15%</span>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+            <section class="data-customization" aria-labelledby="data-customization-heading">
+                <h3 id="data-customization-heading">Налаштування відображення даних</h3>
+                <form id="data-options-form">
+                    <fieldset>
+                        <legend>Оберіть дані для відображення в детальному прогнозі:</legend>
+                        <label><input type="checkbox" name="uv-index" value="uv"> УФ-індекс</label>
+                        <label><input type="checkbox" name="pressure" value="pressure"> Тиск</label>
+                        <label><input type="checkbox" name="aqi_option" value="aqi"> Індекс якості повітря (AQI)</label>
+                        </fieldset>
+                </form>
+            </section>
+        </section>
+        <aside class="floating-promo">
+            <h4>Спеціальна пропозиція!</h4>
+            <p>Підпишіться на нашу розсилку для ексклюзивних прогнозів.</p>
+            <img src="images/promo_image1.png" alt="Рекламне зображення 1" style="width:100%;">
+        </aside>
+        <div class="floating-info">
+            <p>Цікавий факт про погоду...</p>
+            <img src="images/fact_image.png" alt="Зображення факту" style="width:80px;">
+        </div>
+        <article class="floating-article">
+            <h4>Стаття про зміну клімату</h4>
+            <p>Детальний аналіз останніх тенденцій...</p>
+            <img src="images/climate_article_image.png" alt="Стаття про клімат" style="width:120px; display: block; margin-top: 5px;">
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> WebMeteo. Всі права захищено.</p>
+        <p>Дані надано <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a></p>
+        <img src="images/footer_logo.png" alt="Логотип в підвалі" style="width:50px; opacity: 0.7;">
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Скрипти для меню та іншої логіки будуть додані пізніше
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

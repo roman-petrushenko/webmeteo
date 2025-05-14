@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архів погоди - WebMeteo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <h1><a href="index.html">WebMeteo</a></h1>
+        </div>
+        <nav class="main-nav">
+            <button id="menu-toggle-archive" aria-label="Відкрити меню" aria-expanded="false">≡</button>
+            <ul class="nav-list" id="nav-menu-archive">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="#settings-archive">Налаштування</a></li> <li><a href="auth.html" id="auth-link-archive">Вхід/Реєстрація</a></li>
+                <li><a href="analytics.html">Відділ аналітики</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container archive-page-container">
+        <section class="archive-intro">
+            <h2>Архів погодних даних</h2>
+            <p>Оберіть населений пункт та період для перегляду історичних даних про погоду.</p>
+        </section>
+
+        <section class="archive-controls-section card">
+            <h3>Фільтри пошуку</h3>
+            <form id="archive-search-form" class="archive-form">
+                <div class="form-group">
+                    <label for="archive-city-input">Населений пункт:</label>
+                    <input type="text" id="archive-city-input" name="city" placeholder="Наприклад, Львів" required>
+                </div>
+                <div class="form-group">
+                    <label for="archive-date-start">Дата (з):</label>
+                    <input type="date" id="archive-date-start" name="dateStart" required>
+                </div>
+                <div class="form-group">
+                    <label for="archive-date-end">Дата (по):</label>
+                    <input type="date" id="archive-date-end" name="dateEnd" required>
+                </div>
+                <div class="form-group">
+                    <label for="archive-data-type">Тип даних:</label>
+                    <select id="archive-data-type" name="dataType">
+                        <option value="daily_summary">Щоденний підсумок</option>
+                        <option value="hourly_details">Погодинні деталі</option>
+                    </select>
+                </div>
+                <button type="submit" class="button-primary">Знайти дані</button>
+            </form>
+        </section>
+
+        <section class="archive-results-section card" aria-live="polite">
+            <h3>Результати пошуку</h3>
+            <div id="archive-results-placeholder" class="results-placeholder">
+                <p>Дані будуть відображені тут після пошуку.</p>
+                </div>
+            <div id="archive-data-display" style="display:none;">
+                </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year-archive"></span> WebMeteo. Всі права захищено.</p>
+    </footer>
+    <script>
+        document.getElementById('current-year-archive').textContent = new Date().getFullYear();
+        const menuToggleArchive = document.getElementById('menu-toggle-archive');
+        const navMenuArchive = document.getElementById('nav-menu-archive');
+        if (menuToggleArchive && navMenuArchive) {
+            menuToggleArchive.addEventListener('click', () => {
+                const isExpanded = menuToggleArchive.getAttribute('aria-expanded') === 'true' || false;
+                menuToggleArchive.setAttribute('aria-expanded', !isExpanded);
+                navMenuArchive.classList.toggle('active');
+            });
+        }
+        // Тут буде JS для обробки форми, завантаження та відображення даних архіву
+    </script>
+</body>
+</html>

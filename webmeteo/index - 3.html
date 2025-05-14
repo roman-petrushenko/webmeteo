@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebMeteo - Прогноз погоди</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <h1>WebMeteo</h1>
+        </div>
+        <nav class="main-nav">
+            <button id="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">≡</button>
+            <ul class="nav-list" id="nav-menu">
+                <li><a href="#settings" id="settings-link">Налаштування</a></li>
+                <li><a href="auth.html" id="auth-link">Вхід/Реєстрація</a></li>
+                <li><a href="archive.html">Архів</a></li>
+                <li><a href="analytics.html">Відділ аналітики</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="search-section" aria-labelledby="search-heading">
+            <h2 id="search-heading" class="visually-hidden">Пошук населеного пункту</h2>
+            <form id="city-search-form">
+                <label for="city-input">Введіть населений пункт:</label>
+                <input type="text" id="city-input" name="city" placeholder="Наприклад, Київ" required>
+                <button type="submit">Знайти</button>
+            </form>
+        </section>
+
+        <section class="weather-display" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Погода для <span id="current-city-display">Місто</span></h2>
+
+            <div class="forecast-controls">
+                <label for="forecast-days-select">Прогноз на:</label>
+                <select id="forecast-days-select">
+                    <option value="7" selected>7 днів</option>
+                    <option value="10">10 днів</option>
+                </select>
+            </div>
+
+            <nav class="daily-tabs-nav" aria-label="Прогноз по днях">
+                <ul id="daily-tabs-container" class="daily-tabs-list">
+                    <li class="day-tab active" role="tab" aria-selected="true" aria-controls="hourly-forecast-panel-0" id="day-tab-0">
+                        <span class="day-tab-date">Сьогодні</span>
+                        <img src="images/placeholder_icon_small.png" alt="Погода" class="day-tab-icon">
+                        <span class="day-tab-temp">15°/8°</span>
+                    </li>
+                    <li class="day-tab" role="tab" aria-selected="false" aria-controls="hourly-forecast-panel-1" id="day-tab-1">
+                        <span class="day-tab-date">Нд, 12 Трав</span>
+                        <img src="images/placeholder_icon_small.png" alt="Погода" class="day-tab-icon">
+                        <span class="day-tab-temp">17°/9°</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <section id="hourly-forecasts-container" aria-live="polite">
+                <div class="hourly-forecast-panel" role="tabpanel" id="hourly-forecast-panel-TEMPLATE" style="display: none;"> <h4 class="hourly-forecast-date-heading">Погодинний прогноз для <span class="selected-date-hourly"></span></h4>
+                    
+                    <div class="day-summary-details" id="day-summary-details-TEMPLATE">
+                        <h5 class="day-summary-details-heading">Деталі дня:</h5>
+                        <div class="details-grid-summary">
+                            <p>Відчувається як: <span class="day-feels-like">--</span>°C</p>
+                            <p>Вологість: <span class="day-humidity">--</span>%</p>
+                            <p>Вітер: <span class="day-wind">--</span> м/с</p>
+                            <p>Світанок: <span class="day-sunrise">--:--</span></p>
+                            <p>Захід сонця: <span class="day-sunset">--:--</span></p>
+                            
+                            {/* Опціональні елементи, видимість керується JS */}
+                            <p class="detail-item uv-index-item" style="display:none;">УФ-індекс: <span class="day-uv-index">--</span></p>
+                            <p class="detail-item pressure-item" style="display:none;">Тиск: <span class="day-pressure">--</span> гПа</p>
+                            <p class="detail-item aqi-item" style="display:none;">AQI: <span class="day-aqi">--</span></p>
+                        </div>
+                    </div>
+
+                    <div class="hourly-columns-grid">
+                        {/* Колонки годин будуть додані сюди JS */}
+                    </div>
+                </div>
+
+                {/* Панелі для реальних днів будуть згенеровані JS на основі шаблону */}
+                {/* Приклад згенерованої панелі (як це виглядало б після роботи JS) */}
+                <div class="hourly-forecast-panel active" role="tabpanel" id="hourly-forecast-panel-0" aria-labelledby="day-tab-0">
+                    <h4 class="hourly-forecast-date-heading">Погодинний прогноз для <span class="selected-date-hourly">Сьогодні</span></h4>
+                    <div class="day-summary-details">
+                        <h5 class="day-summary-details-heading">Деталі дня:</h5>
+                        <div class="details-grid-summary">
+                            <p>Відчувається як: <span class="day-feels-like">14</span>°C</p>
+                            <p>Вологість: <span class="day-humidity">60</span>%</p>
+                            <p>Вітер: <span class="day-wind">5</span> м/с, ПнЗх</p>
+                            <p>Світанок: <span class="day-sunrise">05:30</span></p>
+                            <p>Захід сонця: <span class="day-sunset">20:45</span></p>
+                            <p class="detail-item uv-index-item" style="display:none;">УФ-індекс: <span class="day-uv-index">--</span></p>
+                            <p class="detail-item pressure-item" style="display:none;">Тиск: <span class="day-pressure">--</span> гПа</p>
+                            <p class="detail-item aqi-item" style="display:block;">AQI: <span class="day-aqi">35 (Добре)</span></p> {/* Приклад, якщо AQI увімкнено */}
+                        </div>
+                    </div>
+                    <div class="hourly-columns-grid">
+                        <div class="hour-column">
+                            <span class="hour-time">00:00</span> <img src="images/placeholder_icon_tiny.png" alt="" class="hour-icon"> <span class="hour-temp">9°C</span> <span class="hour-precip">10%</span>
+                        </div>
+                        {/* ... інші колонки ... */}
+                    </div>
+                </div>
+                 <div class="hourly-forecast-panel" role="tabpanel" id="hourly-forecast-panel-1" aria-labelledby="day-tab-1">
+                    {/* ... структура для другого дня ... */}
+                </div>
+
+            </section>
+
+            <section class="data-customization card" aria-labelledby="data-customization-heading">
+                <h3 id="data-customization-heading">Додаткові параметри</h3>
+                <form id="data-options-form">
+                    <fieldset>
+                        <legend class="visually-hidden">Виберіть параметри для відображення в деталях дня:</legend>
+                        <label><input type="checkbox" name="uv-index" value="uv-index-item"> УФ-індекс</label>
+                        <label><input type="checkbox" name="pressure" value="pressure-item"> Тиск</label>
+                        <label><input type="checkbox" name="aqi" value="aqi-item" checked> Індекс якості повітря (AQI)</label>
+                    </fieldset>
+                </form>
+            </section>
+            
+            <div class="additional-content-wrapper">
+                <div class="floating-info">
+                    <p>Цікавий факт про погоду...</p>
+                    <img src="images/fact_image.png" alt="Зображення факту" style="width:80px;">
+                </div>
+                <article class="floating-article">
+                    <h4>Стаття про зміну клімату</h4>
+                    <p>Детальний аналіз останніх тенденцій...</p>
+                    <img src="images/climate_article_image.png" alt="Стаття про клімат" style="width:120px; display: block; margin-top: 5px;">
+                </article>
+            </div>
+
+
+            <section class="newsletter-promo-section card">
+                <h4>Залишайтесь в курсі погоди!</h4>
+                <p>Підпишіться на нашу розсилку для отримання щоденних прогнозів та спеціальних погодних сповіщень.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Ваш Email" required aria-label="Email для підписки">
+                    <button type="submit" class="button-primary">Підписатися</button>
+                </form>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> WebMeteo. Всі права захищено.</p>
+        <p>Дані надано <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a></p>
+        <img src="images/footer_logo.png" alt="Логотип в підвалі" style="width:50px; opacity: 0.7;">
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabsContainer = document.getElementById('daily-tabs-container');
+            const panelsContainer = document.getElementById('hourly-forecasts-container');
+            const dataOptionsForm = document.getElementById('data-options-form');
+
+            // Функція для оновлення видимості деталей на основі галочок
+            const updateDetailVisibility = (activePanel) => {
+                if (!activePanel) return;
+                const summaryDetails = activePanel.querySelector('.day-summary-details');
+                if (!summaryDetails) return;
+
+                const checkboxes = dataOptionsForm.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    const itemClass = checkbox.value; // e.g., "uv-index-item"
+                    const detailElement = summaryDetails.querySelector('.' + itemClass);
+                    if (detailElement) {
+                        detailElement.style.display = checkbox.checked ? 'block' : 'none';
+                        // Тут також буде логіка заповнення даними, якщо вони є
+                        // Наприклад: if (checkbox.checked) { detailElement.querySelector('span').textContent = 'РЕАЛЬНІ ДАНІ'; }
+                    }
+                });
+            };
+            
+            // Функція для завантаження/оновлення даних панелі (зараз тільки заголовок і деталі)
+            const updatePanelContent = (panel, tab) => {
+                // Оновлення заголовка панелі
+                const dateForHeading = tab.querySelector('.day-tab-date').textContent;
+                const panelHeadingSpan = panel.querySelector('.selected-date-hourly');
+                if(panelHeadingSpan) panelHeadingSpan.textContent = dateForHeading;
+
+                // --- СИМУЛЯЦІЯ ЗАВАНТАЖЕННЯ ДАНИХ ДЛЯ ДНЯ ---
+                // У реальному додатку тут будуть AJAX запити або використання вже завантажених даних
+                const summaryDetails = panel.querySelector('.day-summary-details');
+                if (summaryDetails) {
+                    summaryDetails.querySelector('.day-feels-like').textContent = Math.floor(Math.random() * 10 + 10); // випадкові дані
+                    summaryDetails.querySelector('.day-humidity').textContent = Math.floor(Math.random() * 50 + 40);
+                    summaryDetails.querySelector('.day-wind').textContent = Math.floor(Math.random() * 10 + 1) + " м/с";
+                    summaryDetails.querySelector('.day-sunrise').textContent = "05:" + Math.floor(Math.random()*30+15);
+                    summaryDetails.querySelector('.day-sunset').textContent = "20:" + Math.floor(Math.random()*30+30);
+
+                    // Для опціональних (заповнюємо, якщо галочка стоїть, інакше можна приховати/очистити)
+                    if (dataOptionsForm.querySelector('input[name="uv-index"]').checked) {
+                         summaryDetails.querySelector('.day-uv-index').textContent = Math.floor(Math.random() * 11);
+                    }
+                    if (dataOptionsForm.querySelector('input[name="pressure"]').checked) {
+                        summaryDetails.querySelector('.day-pressure').textContent = Math.floor(Math.random() * 30 + 990);
+                    }
+                    if (dataOptionsForm.querySelector('input[name="aqi"]').checked) {
+                        summaryDetails.querySelector('.day-aqi').textContent = Math.floor(Math.random() * 100 + 10);
+                    }
+                }
+                // --- КІНЕЦЬ СИМУЛЯЦІЇ ---
+
+                updateDetailVisibility(panel); // Оновити видимість на основі галочок
+            };
+
+
+            if (tabsContainer && panelsContainer) {
+                const tabs = Array.from(tabsContainer.querySelectorAll('.day-tab')); // Реальні вкладки
+                const panelTemplate = document.getElementById('hourly-forecast-panel-TEMPLATE'); // Шаблон панелі
+
+                // Припускаємо, що панелі вже існують або будуть згенеровані JS
+                // Для цього прикладу, будемо працювати з уже існуючими в HTML панелями
+                const existingPanels = Array.from(panelsContainer.querySelectorAll('.hourly-forecast-panel:not(#hourly-forecast-panel-TEMPLATE)'));
+
+
+                // Ініціалізація: показати першу вкладку та оновити її вміст
+                const initialActiveTab = tabs.find(tab => tab.classList.contains('active'));
+                if (initialActiveTab) {
+                    const initialActivePanelId = initialActiveTab.getAttribute('aria-controls');
+                    const initialActivePanel = document.getElementById(initialActivePanelId);
+                    if (initialActivePanel) {
+                        updatePanelContent(initialActivePanel, initialActiveTab);
+                    }
+                }
+
+
+                tabsContainer.addEventListener('click', (event) => {
+                    const clickedTab = event.target.closest('.day-tab');
+                    if (!clickedTab || clickedTab.classList.contains('active')) {
+                        return; 
+                    }
+
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active');
+                        tab.setAttribute('aria-selected', 'false');
+                    });
+                    existingPanels.forEach(panel => { // Працюємо з існуючими панелями
+                        panel.classList.remove('active');
+                    });
+
+                    clickedTab.classList.add('active');
+                    clickedTab.setAttribute('aria-selected', 'true');
+
+                    const panelId = clickedTab.getAttribute('aria-controls');
+                    const activePanel = document.getElementById(panelId); // Знаходимо відповідну панель
+                    if (activePanel) {
+                        activePanel.classList.add('active');
+                        updatePanelContent(activePanel, clickedTab); // Оновити дані та видимість деталей
+                    }
+                });
+
+                // Обробник для галочок
+                if (dataOptionsForm) {
+                    dataOptionsForm.addEventListener('change', (event) => {
+                        if (event.target.type === 'checkbox') {
+                            const activePanel = panelsContainer.querySelector('.hourly-forecast-panel.active');
+                            updateDetailVisibility(activePanel);
+                        }
+                    });
+                }
+            }
+        });
+        // Існуючий JS для меню та року
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
