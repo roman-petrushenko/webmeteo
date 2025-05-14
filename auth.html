@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід / Реєстрація - WebMeteo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <h1><a href="index.html">WebMeteo</a></h1>
+        </div>
+        <nav class="main-nav">
+             <ul class="nav-list">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="archive.html">Архів</a></li>
+                <li><a href="analytics.html">Відділ аналітики</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container auth-container">
+        <section id="login-section" class="auth-form-section">
+            <h2>Вхід</h2>
+            <form id="login-form">
+                <div>
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required autocomplete="username">
+                </div>
+                <div>
+                    <label for="login-password">Пароль:</label>
+                    <input type="password" id="login-password" name="password" required autocomplete="current-password">
+                </div>
+                <button type="submit">Увійти</button>
+                <p id="login-error-message" class="error-message" style="display:none;"></p>
+            </form>
+        </section>
+
+        <hr class="auth-divider">
+
+        <section id="register-section" class="auth-form-section">
+            <h2>Реєстрація</h2>
+            <form id="register-form">
+                <div>
+                    <label for="register-username">Ім'я користувача (логін):</label>
+                    <input type="text" id="register-username" name="username" required>
+                </div>
+                <div>
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div>
+                    <label for="register-password">Пароль:</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div>
+                    <label for="register-password-confirm">Підтвердіть пароль:</label>
+                    <input type="password" id="register-password-confirm" name="passwordConfirm" required>
+                </div>
+                <button type="submit">Зареєструватися</button>
+                <p id="register-error-message" class="error-message" style="display:none;"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year-auth"></span> WebMeteo. Всі права захищено.</p>
+    </footer>
+    <script>
+        document.getElementById('current-year-auth').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

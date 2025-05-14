@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відділ аналітики - WebMeteo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <h1><a href="index.html">WebMeteo</a></h1>
+        </div>
+        <nav class="main-nav">
+            <button id="menu-toggle-analytics" aria-label="Відкрити меню">≡</button>
+            <ul class="nav-list" id="nav-menu-analytics">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="#settings-analytics">Налаштування</a></li>
+                <li><a href="auth.html" id="auth-link-analytics">Вхід/Реєстрація</a></li>
+                <li><a href="archive.html">Архів</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="analytics-header">
+            <h2>Відділ аналітики: Обговорення та дослідження</h2>
+            <button id="create-topic-btn" style="display: none;">Створити нову тему</button>
+        </section>
+
+        <section id="create-topic-form-section" style="display: none;" class="form-section">
+            <h3>Створення нової теми</h3>
+            <form id="new-topic-form">
+                <div>
+                    <label for="topic-title">Заголовок теми:</label>
+                    <input type="text" id="topic-title" name="title" required>
+                </div>
+                <div>
+                    <label for="topic-content">Ваш пост:</label>
+                    <textarea id="topic-content" name="content" rows="8" required></textarea>
+                </div>
+                <div>
+                    <label for="topic-file">Прикріпити файл (наприклад, дослідження):</label>
+                    <input type="file" id="topic-file" name="file">
+                </div>
+                <div>
+                    <label for="topic-image">Прикріпити зображення:</label>
+                    <input type="file" id="topic-image" name="image" accept="image/*">
+                </div>
+                <button type="submit">Опублікувати тему</button>
+            </form>
+        </section>
+
+        <section class="topics-list" aria-labelledby="topics-table-heading">
+            <h3 id="topics-table-heading">Теми обговорень</h3>
+            <table class="topics-table">
+                <thead>
+                    <tr>
+                        <th>Назва теми</th>
+                        <th>Автор</th>
+                        <th>Дата створення</th>
+                        <th>Коментарі</th>
+                    </tr>
+                </thead>
+                <tbody id="topics-table-body">
+                    <tr>
+                        <td><a href="post-view-example.html">Приклад теми: Аналіз зміни температур за останній рік</a></td>
+                        <td>User123</td>
+                        <td>2024-05-10</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td><a href="post-view-example.html">Обговорення точності моделей прогнозування</a></td>
+                        <td>WeatherFan</td>
+                        <td>2024-05-12</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Останні активності:</h4>
+            <ol class="recent-activity-list">
+                <li>Новий коментар у темі "Аналіз зміни температур..."</li>
+                <li>Створено нову тему "Вплив Ель-Ніньо на погоду в регіоні"</li>
+            </ol>
+        </section>
+
+        <figure class="analytics-promo-banner">
+            <img src="images/analytics_banner.jpg" alt="Банер відділу аналітики" usemap="#analytics_map">
+            <figcaption>Долучайтесь до обговорень!</figcaption>
+            <map name="analytics_map">
+              <area shape="rect" coords="0,0,200,50" href="#create-topic-btn" alt="Створити тему">
+            </map>
+        </figure>
+
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year-analytics"></span> WebMeteo. Всі права захищено.</p>
+    </footer>
+    <script>
+        document.getElementById('current-year-analytics').textContent = new Date().getFullYear();
+        // Простий скрипт для меню і форми (детальніше в завданні 3)
+        const menuToggleAnalytics = document.getElementById('menu-toggle-analytics');
+        const navMenuAnalytics = document.getElementById('nav-menu-analytics');
+        if(menuToggleAnalytics && navMenuAnalytics) {
+            menuToggleAnalytics.addEventListener('click', () => {
+                navMenuAnalytics.classList.toggle('active');
+            });
+        }
+
+        const createTopicBtn = document.getElementById('create-topic-btn');
+        const createTopicFormSection = document.getElementById('create-topic-form-section');
+        // Припустимо, що кнопка "Створити нову тему" з'являється, якщо користувач увійшов.
+        // Зараз просто для демонстрації показу/приховування форми:
+        if (createTopicBtn && createTopicFormSection) {
+            // Імітація умови входу користувача (для демонстрації)
+            let isLoggedIn = true; // Це буде визначатися реальною логікою авторизації
+            if(isLoggedIn) {
+                createTopicBtn.style.display = 'block';
+            }
+
+            createTopicBtn.addEventListener('click', () => {
+                createTopicFormSection.style.display = createTopicFormSection.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
