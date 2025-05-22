@@ -14,9 +14,23 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
+const allowedOrigins = [
+    'http://localhost:5173', // Для локальної розробки React
+    'https://roman-petrushenko.github.io' // Для цього сайту на GitHub Pages
+];
+
 app.use(cors({
-    origin: 'http://localhost:5173', // Адреса вашого React dev server (Vite за замовчуванням)
-    credentials: true // Якщо будете використовувати cookies/сесії
+    origin: function (origin, callback) {
+        // Дозволити запити без origin (наприклад, Postman, мобільні додатки, або якщо origin не встановлено)
+        // АБО запити з дозволених доменів
+        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            console.warn(`CORS: Запит з недозволеного домену: ${origin}`);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
 }));
 
 app.use(express.json()); // Дозволяє Express обробляти JSON у тілі запиту
