@@ -1,0 +1,12 @@
+# Dependencies
+client/node_modules/
+server/node_modules/
+
+# Production builds
+client/dist/
+
+# Env files
+client/.env
+client/.env.local
+server/.env
+server/.env.local
