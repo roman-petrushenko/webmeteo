@@ -1,8 +1,10 @@
 // client/src/services/api.js
-// ... (API_BASE_URL та request залишаються без змін) ...
-const API_BASE_URL = process.env.NODE_ENV === 'development' 
-    ? 'http://localhost:3001/api' 
-    : '/api';
+
+const RENDER_BACKEND_URL = 'https://webmeteo.onrender.com/api'; 
+
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+    ? RENDER_BACKEND_URL  // Використовуємо URL від Render для 'production'
+    : 'http://localhost:3001/api'; // Для локальної розробки
 
 const request = async (endpoint, method = 'GET', body = null, includeAuth = false) => {
     const headers = {};
