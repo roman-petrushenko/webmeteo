@@ -2,7 +2,11 @@ import React, { useContext, useState } from 'react';
 import AuthContext from '../../context/AuthContext';
 import { deletePost as apiDeletePost, updatePost as apiUpdatePost } from '../../services/api';
 
-const UPLOADS_BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : '';
+const RENDER_UPLOADS_URL = 'https://webmeteo.onrender.com'; 
+
+const UPLOADS_BASE_URL = process.env.NODE_ENV === 'production' 
+    ? RENDER_UPLOADS_URL // Для розгорнутого backend на Render 
+    : 'http://localhost:3001' ; // Для локального backend      
 
 function PostItem({ post, onPostDeleted, onPostUpdated }) {
   const { user, isLoggedIn } = useContext(AuthContext);
