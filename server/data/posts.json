@@ -1,0 +1,753 @@
+[
+  {
+    "id": "96ee9579-e517-4a2b-9e48-5d8059be5305",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "e8e858d4-f524-45e1-8bf5-8305323adab1",
+    "authorUsername": "user123",
+    "content": "Привіт! - 1",
+    "createdAt": "2025-05-17T22:39:22.851Z",
+    "updatedAt": "2025-05-17T22:46:34.509Z",
+    "attachments": []
+  },
+  {
+    "id": "c0dd09f7-3bf7-412f-b630-24c167e35596",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "8d656ecf-f4ff-4b37-adcd-77cc1a365bda",
+    "authorUsername": "user223",
+    "content": "Привіт!!23",
+    "createdAt": "2025-05-17T22:47:47.637Z",
+    "updatedAt": "2025-05-17T22:47:47.637Z",
+    "attachments": []
+  },
+  {
+    "id": "7a3c0d04-1398-4ca7-ab84-8d133a15592b",
+    "topicId": "4a4257a9-287e-4bcd-9149-6fbc1666e8e7",
+    "authorId": "e8e858d4-f524-45e1-8bf5-8305323adab1",
+    "authorUsername": "user123",
+    "content": "132-kk",
+    "createdAt": "2025-05-17T23:08:31.950Z",
+    "updatedAt": "2025-05-17T23:08:41.316Z",
+    "attachments": []
+  },
+  {
+    "id": "c3c58fc6-ecf9-4e73-b93c-d251c2b8edb9",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост1",
+    "createdAt": "2025-05-20T11:45:43.115Z",
+    "updatedAt": "2025-05-20T11:45:43.115Z",
+    "attachments": []
+  },
+  {
+    "id": "4d5e2df4-908c-42d2-8d78-625d47879d88",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост2",
+    "createdAt": "2025-05-20T11:46:02.341Z",
+    "updatedAt": "2025-05-20T11:46:02.355Z",
+    "attachments": []
+  },
+  {
+    "id": "b990a17b-ad6d-4cd9-8fa5-fe5c389eba8b",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост3",
+    "createdAt": "2025-05-20T11:46:09.710Z",
+    "updatedAt": "2025-05-20T11:46:09.713Z",
+    "attachments": []
+  },
+  {
+    "id": "1ac48bb4-f39f-4a8c-bf59-032fae42f80f",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост4",
+    "createdAt": "2025-05-20T11:46:19.223Z",
+    "updatedAt": "2025-05-20T11:46:19.227Z",
+    "attachments": []
+  },
+  {
+    "id": "b2e01b55-219f-4765-8ef9-ab89e08dfaa7",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост5",
+    "createdAt": "2025-05-20T11:46:27.020Z",
+    "updatedAt": "2025-05-20T11:46:27.025Z",
+    "attachments": []
+  },
+  {
+    "id": "c0bbc9e9-b026-42ca-bc88-b16cc39d6a1b",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост6",
+    "createdAt": "2025-05-20T11:46:36.683Z",
+    "updatedAt": "2025-05-20T11:46:36.691Z",
+    "attachments": []
+  },
+  {
+    "id": "67e7187c-6589-4be0-9fd5-e0fe75bb2469",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост7",
+    "createdAt": "2025-05-20T11:46:51.881Z",
+    "updatedAt": "2025-05-20T11:46:51.885Z",
+    "attachments": []
+  },
+  {
+    "id": "15682374-c9e7-45d1-9f04-f349bb6ab74e",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост8",
+    "createdAt": "2025-05-20T11:46:58.253Z",
+    "updatedAt": "2025-05-20T11:46:58.257Z",
+    "attachments": []
+  },
+  {
+    "id": "0dbdd53c-b61f-4c8d-812d-678b1f93a3d2",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост9",
+    "createdAt": "2025-05-20T11:47:05.979Z",
+    "updatedAt": "2025-05-20T11:47:06.005Z",
+    "attachments": []
+  },
+  {
+    "id": "635ad1d0-6ce7-4ea8-8897-4115248efd5e",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост10",
+    "createdAt": "2025-05-20T11:47:12.236Z",
+    "updatedAt": "2025-05-20T11:47:12.242Z",
+    "attachments": []
+  },
+  {
+    "id": "d3c0437d-de7c-4cff-89f2-8154887a0752",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост11",
+    "createdAt": "2025-05-20T11:47:22.619Z",
+    "updatedAt": "2025-05-20T11:47:22.633Z",
+    "attachments": []
+  },
+  {
+    "id": "c3f8784b-59f4-4edc-8c55-81bd13134e33",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост12",
+    "createdAt": "2025-05-20T11:47:30.907Z",
+    "updatedAt": "2025-05-20T11:47:30.916Z",
+    "attachments": []
+  },
+  {
+    "id": "2dd783c8-8840-41cf-81d3-7fefb89ec707",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост13",
+    "createdAt": "2025-05-20T11:47:38.306Z",
+    "updatedAt": "2025-05-20T11:47:38.310Z",
+    "attachments": []
+  },
+  {
+    "id": "58e6708b-755b-43a0-8baf-4d34ec94d71f",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост14",
+    "createdAt": "2025-05-20T11:47:47.907Z",
+    "updatedAt": "2025-05-20T11:47:47.911Z",
+    "attachments": []
+  },
+  {
+    "id": "d443dbf9-e4fb-4019-8ebc-1f87781f0dd4",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост15",
+    "createdAt": "2025-05-20T11:47:53.363Z",
+    "updatedAt": "2025-05-20T11:47:53.389Z",
+    "attachments": []
+  },
+  {
+    "id": "0962430a-24a5-4c0c-ad7f-0acf2d663812",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост16",
+    "createdAt": "2025-05-20T11:48:00.833Z",
+    "updatedAt": "2025-05-20T11:48:00.836Z",
+    "attachments": []
+  },
+  {
+    "id": "9ebc1a95-b033-40a9-a917-43c58f4e5cd5",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост17",
+    "createdAt": "2025-05-20T11:48:06.004Z",
+    "updatedAt": "2025-05-20T11:48:06.008Z",
+    "attachments": []
+  },
+  {
+    "id": "851d64ce-6ff9-42dc-b5b9-7b37c49be32b",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост18",
+    "createdAt": "2025-05-20T11:48:10.718Z",
+    "updatedAt": "2025-05-20T11:48:10.720Z",
+    "attachments": []
+  },
+  {
+    "id": "fc56ed78-803d-45e8-a79e-2a1a721a4df1",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост19",
+    "createdAt": "2025-05-20T11:48:15.701Z",
+    "updatedAt": "2025-05-20T11:48:15.705Z",
+    "attachments": []
+  },
+  {
+    "id": "49e12f18-b182-4b42-a5f4-6747a87f80e4",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост20",
+    "createdAt": "2025-05-20T11:48:22.847Z",
+    "updatedAt": "2025-05-20T11:48:22.849Z",
+    "attachments": []
+  },
+  {
+    "id": "f2521c31-7b75-4b88-8f8f-f7c5f7fe7970",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Пост21_a",
+    "createdAt": "2025-05-20T11:48:39.156Z",
+    "updatedAt": "2025-05-20T11:48:39.161Z",
+    "attachments": []
+  },
+  {
+    "id": "7865bbb3-3016-4d35-b82a-6207d5e3490e",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Привіт!-!!",
+    "createdAt": "2025-05-20T12:07:50.506Z",
+    "updatedAt": "2025-05-20T12:08:55.492Z",
+    "attachments": []
+  },
+  {
+    "id": "13a76bff-6bdb-47cc-9f46-6d6aeecd8c7b",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост1",
+    "createdAt": "2025-05-20T12:09:18.190Z",
+    "updatedAt": "2025-05-20T12:09:18.190Z",
+    "attachments": []
+  },
+  {
+    "id": "e4de14ed-8a38-48ea-827e-0b2e1392b116",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост2",
+    "createdAt": "2025-05-20T12:09:24.191Z",
+    "updatedAt": "2025-05-20T12:09:24.191Z",
+    "attachments": []
+  },
+  {
+    "id": "76e29a10-98e6-492a-b80a-362c97d73a86",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост3-ok!",
+    "createdAt": "2025-05-20T12:09:33.543Z",
+    "updatedAt": "2025-05-20T12:41:08.134Z",
+    "attachments": []
+  },
+  {
+    "id": "bbbb3e04-d642-411d-a766-65f2bd91430e",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Привіт!!",
+    "createdAt": "2025-05-20T12:44:03.438Z",
+    "updatedAt": "2025-05-20T12:44:03.438Z",
+    "attachments": []
+  },
+  {
+    "id": "a664e202-8213-4618-936d-5c739d471883",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост1",
+    "createdAt": "2025-05-20T12:44:28.611Z",
+    "updatedAt": "2025-05-20T12:44:28.611Z",
+    "attachments": []
+  },
+  {
+    "id": "924ec779-3b19-4eec-be02-44d8eff5f8e8",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост2",
+    "createdAt": "2025-05-20T12:44:33.443Z",
+    "updatedAt": "2025-05-20T12:44:33.445Z",
+    "attachments": []
+  },
+  {
+    "id": "f1b5fd27-28db-4aba-8fe1-e8d3c061149c",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Да, привіт!",
+    "createdAt": "2025-05-20T12:56:50.236Z",
+    "updatedAt": "2025-05-20T12:56:50.236Z",
+    "attachments": []
+  },
+  {
+    "id": "f5dcaf2f-09aa-41b9-bba2-0e506556484f",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "привіт!",
+    "createdAt": "2025-05-20T13:27:35.381Z",
+    "updatedAt": "2025-05-20T13:27:35.381Z",
+    "attachments": []
+  },
+  {
+    "id": "2d3268b3-214c-4474-8907-399c5ae010d2",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Привіт!",
+    "createdAt": "2025-05-20T13:42:23.753Z",
+    "updatedAt": "2025-05-20T13:42:23.753Z",
+    "attachments": []
+  },
+  {
+    "id": "f1febf54-295f-45d2-bca2-0ac02c882636",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами.",
+    "createdAt": "2025-05-20T15:55:12.754Z",
+    "updatedAt": "2025-05-20T15:55:12.754Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747756512265-917748134.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "file",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postFile-1747756512271-872248111.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "5882d741-bebe-4ae3-82e5-4e518165273b",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами.",
+    "createdAt": "2025-05-20T15:59:13.622Z",
+    "updatedAt": "2025-05-20T15:59:13.626Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postImage-1747756752872-788883118.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "file",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postFile-1747756752874-77198656.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "8b115f40-d0e8-439c-9bad-17bee55e7a19",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами.",
+    "createdAt": "2025-05-20T15:59:56.993Z",
+    "updatedAt": "2025-05-20T15:59:57.011Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postImage-1747756796781-110600544.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "file",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postFile-1747756796795-244061158.png",
+        "mimetype": "image/png",
+        "size": 119615
+      }
+    ]
+  },
+  {
+    "id": "7f271216-fc95-4c6e-b50f-285ba6ffef66",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами.",
+    "createdAt": "2025-05-20T16:05:28.043Z",
+    "updatedAt": "2025-05-20T16:05:28.045Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747757127570-370902656.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "file",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postFile-1747757127805-464875051.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "2908d58c-ce3a-473f-bc33-4626bc112de7",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами 2.",
+    "createdAt": "2025-05-20T16:06:38.029Z",
+    "updatedAt": "2025-05-20T16:06:38.031Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747757197836-229951046.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "file",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postFile-1747757197847-168042091.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "b18cf081-dbc9-4d95-b49d-9aac16fe4c24",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами 2.",
+    "createdAt": "2025-05-20T16:10:16.690Z",
+    "updatedAt": "2025-05-20T16:10:16.692Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747757416456-986313785.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "file",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postFile-1747757416485-946720891.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "04d37cad-46a4-4607-9de4-de63cddf161c",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами 3.",
+    "createdAt": "2025-05-20T16:10:51.705Z",
+    "updatedAt": "2025-05-20T16:10:51.708Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747757451590-106848541.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "file",
+        "filename": "doc_file.docx",
+        "path": "/uploads/postFile-1747757451599-118433034.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "118e953f-6e84-4f77-8cf4-4cc478aad427",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами 3.",
+    "createdAt": "2025-05-20T16:21:47.764Z",
+    "updatedAt": "2025-05-20T16:21:47.765Z",
+    "attachments": [
+      {
+        "type": "image",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747758107593-813674028.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "file",
+        "filename": "doc_file.docx",
+        "path": "/uploads/attachmentFiles-1747758107595-834227329.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "file",
+        "filename": "doc_file - 2.docx",
+        "path": "/uploads/attachmentFiles-1747758107601-838844875.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "9b5d5d38-5dcf-4cd3-9dd9-11fbfc3745bc",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами 3.",
+    "createdAt": "2025-05-20T16:32:49.222Z",
+    "updatedAt": "2025-05-20T16:32:49.226Z",
+    "attachments": [
+      {
+        "type": "image",
+        "fieldname": "postImage",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747758769077-406875860.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "doc_file.docx",
+        "path": "/uploads/attachmentFiles-1747758769107-554421339.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "doc_file - 2.docx",
+        "path": "/uploads/attachmentFiles-1747758769143-132150741.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "8e2a2588-1a4b-48d6-af16-96c48bba316c",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "authorUsername": "testuser",
+    "content": "Текст мого нового поста з файлами 3.",
+    "createdAt": "2025-05-20T16:34:10.461Z",
+    "updatedAt": "2025-05-20T16:34:10.461Z",
+    "attachments": [
+      {
+        "type": "image",
+        "fieldname": "postImage",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747758850395-744906285.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "doc_file.docx",
+        "path": "/uploads/attachmentFiles-1747758850397-893399890.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "doc_file - 2.docx",
+        "path": "/uploads/attachmentFiles-1747758850406-354313135.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "image",
+        "fieldname": "attachmentFiles",
+        "filename": "sun_pic.png",
+        "path": "/uploads/attachmentFiles-1747758850407-293158884.png",
+        "mimetype": "image/png",
+        "size": 119615
+      }
+    ]
+  },
+  {
+    "id": "b3065046-8039-4b6b-96de-70db41341384",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост1-3",
+    "createdAt": "2025-05-20T17:25:28.028Z",
+    "updatedAt": "2025-05-20T17:56:42.054Z",
+    "attachments": [
+      {
+        "type": "image",
+        "fieldname": "postImage",
+        "filename": "footer_logo.png.jpg",
+        "path": "/uploads/postImage-1747761928005-421778985.jpg",
+        "mimetype": "image/jpeg",
+        "size": 22681
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "doc_file.docx",
+        "path": "/uploads/attachmentFiles-1747761928006-466858999.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "874b8e20-a970-49cf-aba9-e5303308b11a",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "12",
+    "createdAt": "2025-05-20T17:30:02.897Z",
+    "updatedAt": "2025-05-20T17:30:02.897Z",
+    "attachments": [
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "doc_file.docx",
+        "path": "/uploads/attachmentFiles-1747762202822-982793141.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "image",
+        "fieldname": "attachmentFiles",
+        "filename": "sun_pic.png",
+        "path": "/uploads/attachmentFiles-1747762202831-816153195.png",
+        "mimetype": "image/png",
+        "size": 119615
+      }
+    ]
+  },
+  {
+    "id": "2b7fa805-fbab-4697-b1fe-ac4f6bc687ce",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост232-!!",
+    "createdAt": "2025-05-20T21:06:13.536Z",
+    "updatedAt": "2025-05-20T21:06:20.977Z",
+    "attachments": [
+      {
+        "type": "image",
+        "fieldname": "postImage",
+        "filename": "sun_pic.png",
+        "path": "/uploads/postImage-1747775173502-590480352.png",
+        "mimetype": "image/png",
+        "size": 119615
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "doc_file - 2.docx",
+        "path": "/uploads/attachmentFiles-1747775173506-546359045.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "1aa6c50f-5a85-4b46-9017-e8b818a34fce",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост2333",
+    "createdAt": "2025-05-20T21:07:08.568Z",
+    "updatedAt": "2025-05-20T21:07:08.568Z",
+    "attachments": [
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "attachmentFiles-1747758769107-554421339.docx",
+        "path": "/uploads/attachmentFiles-1747775228481-461113401.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "attachmentFiles-1747758107601-838844875.docx",
+        "path": "/uploads/attachmentFiles-1747775228484-287383058.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      },
+      {
+        "type": "document",
+        "fieldname": "attachmentFiles",
+        "filename": "attachmentFiles-1747758107595-834227329.docx",
+        "path": "/uploads/attachmentFiles-1747775228491-444602168.docx",
+        "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 12018
+      }
+    ]
+  },
+  {
+    "id": "52f84314-d15f-415d-aa94-6351a7fc9c84",
+    "topicId": "1e48cc40-6a8c-45f6-850a-584e31aff6c7",
+    "authorId": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "authorUsername": "user123@gmail.com",
+    "content": "Пост882",
+    "createdAt": "2025-05-20T21:07:38.807Z",
+    "updatedAt": "2025-05-20T21:07:38.807Z",
+    "attachments": []
+  }
+]

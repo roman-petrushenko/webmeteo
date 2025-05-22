@@ -1,0 +1,30 @@
+[
+  {
+    "id": "30abcf74-fd29-453b-9ac2-425fdc1904eb",
+    "username": "user123@gmail.com",
+    "email": "user123@gmail.com",
+    "passwordHash": "$2b$10$6PjpmfKqKvahpvcnzWfKj.jcETKqQuRjF8UcyEvsZwBhsJGxURg8O",
+    "isAdmin": false
+  },
+  {
+    "id": "e8e858d4-f524-45e1-8bf5-8305323adab1",
+    "username": "user123",
+    "email": "user234@gmail.com",
+    "passwordHash": "$2b$10$5tPGl/G/cZwc24DPHTdc0ehLuWssrwxi52Iz16FoNgpS3E/tBgxX6",
+    "isAdmin": false
+  },
+  {
+    "id": "8d656ecf-f4ff-4b37-adcd-77cc1a365bda",
+    "username": "user223",
+    "email": "user223@gmail.com",
+    "passwordHash": "$2b$10$K80j09O91mUPxdrvCDB57e5Geeq8jTMtoG49eKNW/Fai1Q97trQ8u",
+    "isAdmin": true
+  },
+  {
+    "id": "ffdcc01b-1e74-459e-b85f-f242f4dd704a",
+    "username": "testuser",
+    "email": "test@example.com",
+    "passwordHash": "$2b$10$2jDC2ys3dlJO0pxMlTV2eu4Jwln2fyWYSs1vPKsB/.HWtwOEV67kG",
+    "isAdmin": false
+  }
+]

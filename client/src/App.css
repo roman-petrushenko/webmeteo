@@ -1,0 +1,854 @@
+/* Глобальні стилі для #root та main вже є в index.css */
+
+/* Header Styles */
+.app-header {
+  background-color: #4682b4; /* Сталевий синій */
+  color: white;
+  padding: 1rem 2rem; /* Зменшено padding, бо пошук прибрали */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Можна обмежити ширину для великих екранів */
+  margin: 0 auto;
+}
+
+.app-header .logo-link h1 {
+  margin: 0;
+  font-size: 2.2rem; /* Як було */
+  color: white;
+  text-decoration: none;
+}
+.app-header .logo-link {
+    text-decoration: none;
+}
+
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav .nav-item {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav .nav-item:hover,
+.main-nav .nav-item.active { /* Стиль для активного посилання NavLink */
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-nav .username-display {
+    margin-right: 15px;
+    font-style: italic;
+}
+
+.main-nav .logout-button {
+  background-color: #dc3545; /* Червоний для кнопки виходу */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.main-nav .logout-button:hover {
+  background-color: #c82333;
+}
+
+
+/* Footer Styles */
+.app-footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #333;
+  color: #f0f8ff;
+  margin-top: auto; /* Притискає футер до низу, якщо вмісту мало */
+  font-size: 0.85rem;
+}
+
+
+/* Стилі для сторінки Авторизації (з auth.html) */
+.auth-main-container { /* Огортає .auth-container */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Щоб починалось зверху, якщо сторінка довга */
+    padding-top: 2rem; /* Відступ зверху */
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px; /* Максимальна ширина форм */
+}
+
+.form-toggle {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.form-toggle button {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #777;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.form-toggle button.active {
+    color: #4682b4;
+    border-bottom-color: #4682b4;
+    font-weight: bold;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%; /* Займає всю доступну ширину */
+    box-sizing: border-box; /* padding та border не збільшують загальну ширину */
+    padding: 0.75rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.auth-form button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.auth-form button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.form-message {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.form-message.success { color: green; }
+.form-message.error { color: red; }
+
+/* Адаптивність для хедера */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 0.8rem 1rem;
+    }
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .app-header .logo-link h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav .nav-item {
+        font-size: 0.9rem;
+        margin: 5px;
+        padding: 6px 10px;
+    }
+    .main-nav .username-display {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+/* ... (попередні стилі App, Header, Footer, Auth Forms з App.css) ... */
+
+/* Стилі для компонентів погоди (адаптовані з вашого style.css) */
+.weather-search-container {
+  margin-top: 1rem; /* Змінено з .search-container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.weather-search-container input[type="text"] {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  width: 300px;
+}
+.weather-search-container input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.weather-search-container button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.weather-search-container button:hover {
+  background-color: #4cae4c;
+}
+.weather-search-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.current-location-display {
+  text-align: center;
+  font-size: 1.3rem; /* Як було в main */
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+.current-location-display span {
+  font-weight: bold;
+}
+
+.daily-forecast-react-container { /* Новий клас */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 0.3rem;
+  margin-bottom: 1.8rem;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.day-widget-react { /* Новий клас */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.4rem 0.3rem;
+  flex-basis: calc(18.5% - 0.3rem);
+  flex-shrink: 0;
+  min-width: 115px;
+  max-height: 160px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.day-widget-react:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.day-widget-react.selected {
+  border-color: #4682b4; /* Сталевий синій */
+  background-color: #e6f3ff; /* Дуже світло-синій */
+}
+.day-widget-react h3 {
+  margin-top: 0.1rem; margin-bottom: 0.1rem; font-size: 0.8rem; color: #4682b4; line-height: 1.1;
+}
+.day-widget-react .date-day {
+  font-size: 0.7rem; margin-bottom: 0.2rem; line-height: 1.1;
+}
+.day-widget-react img {
+  width: 48px; height: 48px; margin: 0.1rem auto;
+}
+.day-widget-react .temp-range {
+  font-size: 0.85rem; font-weight: bold; margin-bottom: 0.2rem; line-height: 1.1;
+}
+.day-widget-react .temp-min { color: #007bff; }
+.day-widget-react .temp-max { color: #dc3545; }
+.day-widget-react .description {
+  font-size: 0.7rem; color: #555; text-transform: capitalize; line-height: 1.2;
+  min-height: 1.2em; max-height: 2.4em; overflow: hidden; text-overflow: ellipsis;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; margin-bottom: 0.1rem;
+}
+
+.hourly-forecast-section-react { /* Новий клас */
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  margin-top: 1.5rem;
+}
+#hourlyForecastTitleReact { /* Новий ID */
+  text-align: center; color: #333; margin-bottom: 1rem; font-size: 1.5rem;
+}
+#noDaySelectedMessageReact { /* Новий ID */
+  text-align: center; font-style: italic; color: #777; padding: 1.5rem;
+}
+
+.hourly-forecast-table-container-react { /* Новий клас */
+  overflow-x: auto;
+}
+#hourlyForecastTableReact { /* Новий ID */
+  table-layout: auto; width: auto; min-width: 100%;
+  border-collapse: collapse; margin-top: 1rem; font-size: 0.85rem;
+}
+#hourlyForecastTableReact th,
+#hourlyForecastTableReact td {
+  border: 1px solid #e0e0e0; padding: 0.5rem 0.3rem;
+  text-align: left; white-space: nowrap;
+}
+#hourlyForecastTableReact th:first-child,
+#hourlyForecastTableReact td:first-child {
+  background-color: #f9f9f9; font-weight: bold; position: sticky; left: 0; z-index: 2;
+  width: 120px; min-width: 120px; max-width: 120px;
+}
+#hourlyForecastTableReact thead th {
+  background-color: #f9f9f9; font-weight: bold; position: sticky; top: 0; z-index: 1;
+}
+#hourlyForecastTableReact th:not(:first-child),
+#hourlyForecastTableReact td:not(:first-child) {
+  min-width: 65px; text-align: center;
+}
+#hourlyForecastTableReact td.description-cell { /* Використовуємо той самий клас, що і в config */
+  white-space: normal; word-break: break-word; min-width: 85px;
+}
+#hourlyForecastTableReact tbody tr:nth-child(even) { background-color: #fdfdfd; }
+#hourlyForecastTableReact tbody tr:hover { background-color: #f0f8ff; }
+
+.optional-data-toggle-container-react { /* Новий клас */
+  margin-top: 1.5rem; padding: 1rem; background-color: #f9f9f9;
+  border-radius: 6px; border: 1px solid #e7e7e7;
+}
+.optional-data-toggle-container-react h3 {
+  margin-top: 0; margin-bottom: 0.8rem; font-size: 1rem; color: #333;
+}
+.checkbox-group-react { /* Новий клас */
+  display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem;
+}
+.optional-data-toggle-container-react label {
+  font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem; cursor: pointer;
+}
+.optional-data-toggle-container-react input[type="checkbox"] {
+  cursor: pointer; accent-color: #4682b4;
+}
+
+/* Адаптивність для компонентів погоди, якщо потрібно (подібно до того, як було в style.css) */
+@media (max-width: 1100px) {
+    .day-widget-react { min-width: 110px; max-height: 155px; }
+    .day-widget-react img { width: 45px; height: 45px;}
+    #hourlyForecastTableReact th:first-child,
+    #hourlyForecastTableReact td:first-child {
+        width: 110px; min-width: 110px; max-width: 110px;
+    }
+    #hourlyForecastTableReact th:not(:first-child),
+    #hourlyForecastTableReact td:not(:first-child) {
+        min-width: 60px;
+    }
+}
+@media (max-width: 768px) {
+    .day-widget-react { min-width: 100px; max-height: 150px; }
+    .day-widget-react img { width: 42px; height: 42px;}
+    #hourlyForecastTableReact th,
+    #hourlyForecastTableReact td { padding: 0.4rem 0.2rem; font-size: 0.75rem; }
+    #hourlyForecastTableReact th:first-child,
+    #hourlyForecastTableReact td:first-child {
+        width: 95px; min-width: 95px; max-width: 95px;
+    }
+    #hourlyForecastTableReact th:not(:first-child),
+    #hourlyForecastTableReact td:not(:first-child) {
+        min-width: 55px;
+    }
+}
+
+/* Стилі для Відділу аналітики */
+.analytics-page-container {
+  /* Можна додати загальний padding, якщо потрібно */
+}
+
+.create-form {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+}
+.create-form h4, .create-form h5 {
+  margin-top: 0;
+  color: #333;
+}
+.create-form .form-group {
+  margin-bottom: 1rem;
+}
+.create-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+.create-form input[type="text"],
+.create-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+.create-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.create-form button[type="submit"] {
+  padding: 0.7rem 1.5rem;
+  background-color: #28a745; /* Зелений для створення */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.create-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+.create-form button:disabled {
+  background-color: #ccc;
+}
+
+
+.toggle-form-button {
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: auto;
+  padding: 0.6rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.toggle-form-button:hover {
+  background-color: #0056b3;
+}
+
+.section-divider {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.topics-section h3, .posts-section h3 {
+  color: #4682b4; /* Колір як у заголовків погоди */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.topics-list .topic-item {
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.topics-list .topic-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 3px solid #007bff;
+}
+.topics-list .topic-item.selected {
+  border-left: 3px solid #28a745; /* Зелений для вибраної теми */
+  background-color: #f8f9fa;
+}
+.topics-list .topic-item h4 { 
+  margin-top: 0; 
+  margin-bottom: 0.3rem; 
+  color: #0056b3; 
+  font-size: 1.2rem;
+}
+.topics-list .topic-item .topic-meta { 
+  font-size: 0.8rem; 
+  color: #6c757d; 
+  margin-bottom: 0.2rem;
+}
+
+.posts-section .posts-list {
+  margin-top: 1rem;
+}
+.post-item {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.post-item .post-meta { 
+  font-size: 0.85em; 
+  color: #555; 
+  margin-bottom: 8px; 
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 5px;
+}
+.post-item .post-meta strong { color: #007bff; }
+.post-item .post-meta .post-date { color: #777; }
+.post-item .post-meta .i-edited { font-style: italic; font-size: 0.9em; }
+
+.post-item .post-content { 
+  margin-bottom: 10px; 
+  line-height: 1.7;
+  white-space: pre-wrap; /* Для збереження переносів рядків з textarea */
+}
+.post-item .post-actions {
+  margin-top: 10px;
+  text-align: right;
+}
+.post-item .post-actions button {
+  font-size: 0.8em;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.post-item .post-actions .edit-btn {
+  background-color: #ffc107; /* Жовтий */
+  border: 1px solid #e0a800;
+  color: #212529;
+}
+.post-item .post-actions .delete-btn {
+  background-color: #dc3545; /* Червоний */
+  border: 1px solid #c82333;
+  color: white;
+}
+
+.edit-post-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.edit-post-form .edit-actions button {
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+/* Стилі для Пагінації */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; /* Для маленьких екранів */
+}
+
+.pagination-controls button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.pagination-controls button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+  background-color: #f9f9f9;
+}
+
+.pagination-controls button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.pagination-info {
+  margin-left: 15px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Адаптивність для пагінації */
+@media (max-width: 480px) {
+  .pagination-controls {
+    flex-direction: column;
+  }
+  .pagination-controls button {
+    margin-bottom: 5px;
+    width: 100%; /* Кнопки на всю ширину */
+  }
+  .pagination-info {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Стилі для форми пошуку тем */
+.topic-search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.topic-search-form input[type="text"] {
+  flex-grow: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.topic-search-form button {
+  padding: 0.6rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.topic-search-form button:hover {
+  background-color: #0056b3;
+}
+.topic-search-form .clear-search-button {
+    background-color: #6c757d; /* Сірий */
+}
+.topic-search-form .clear-search-button:hover {
+    background-color: #5a6268;
+}
+
+.pagination-ellipsis {
+  padding: 8px 12px;
+  margin: 0 4px;
+  color: #555;
+  display: inline-flex; /* Щоб вирівняти з кнопками */
+  align-items: center;
+}
+
+.topic-posts-page-container {
+  /* Можна додати відступи, якщо потрібно */
+}
+
+.back-to-topics-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+  text-decoration: none;
+}
+.back-to-topics-link:hover {
+  text-decoration: underline;
+}
+
+.topic-posts-page-container > h2 { /* Заголовок теми */
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.create-post-section {
+    margin-top: 2rem;
+}
+
+.add-post-button-bottom { /* Стиль для кнопки внизу */
+    /* Можна додати специфічні стилі, якщо потрібно */
+}
+
+/* Стилі для вкладень у постах */
+.post-main-image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.post-main-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.post-attachments {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+.post-attachments strong {
+  display: block;
+  margin-bottom: 5px;
+}
+.post-attachments ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.post-attachments li {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  display: flex; /* Для кращого вирівнювання іконки/прев'ю та тексту */
+  align-items: center;
+}
+.post-attachments a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 5px; /* Відступ від прев'ю/іконки */
+}
+.post-attachments a:hover {
+  text-decoration: underline;
+}
+.post-attachments .attachment-thumbnail {
+  max-width: 50px; /* Розмір прев'ю для додаткових зображень */
+  max-height: 50px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  object-fit: cover; /* Щоб зображення не спотворювалося */
+}
+
+/* Стилі для прев'ю головного зображення */
+.main-image-preview {
+  max-width: 200px; /* Або інший розмір для прев'ю */
+  max-height: 150px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  object-fit: cover; /* Щоб зображення не спотворювалося */
+  cursor: zoom-in; /* Вказує на можливість збільшення */
+  transition: transform 0.2s ease-in-out;
+}
+.main-image-preview:hover {
+    transform: scale(1.05);
+}
+
+
+/* Стилі для модального вікна зображення */
+.image-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Напівпрозорий фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Поверх усього */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 90vw;  /* Максимальна ширина */
+  max-height: 90vh; /* Максимальна висота */
+  display: flex; /* Щоб зображення центрувалося, якщо воно менше */
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal-content img {
+  max-width: 100%;
+  max-height: calc(90vh - 40px); /* Враховуємо padding та можливий хрестик */
+  object-fit: contain; /* Щоб зображення вмістилося повністю */
+  display: block;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -10px; /* Трохи вище, щоб було зручно */
+  right: -10px;
+  color: white;
+  background-color: #333;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+.image-modal-close:hover {
+  background-color: #555;
+}
+
+/* Стилі для TopicItem та його елементів дій */
+.topic-item {
+  /* ... ваші поточні стилі для topic-item ... */
+  display: flex; /* Для розміщення контенту та кнопки дій поруч */
+  justify-content: space-between; /* Розносить контент та кнопку по краях */
+  align-items: center; /* Вирівнює по центру по вертикалі */
+}
+
+.topic-item-content {
+  flex-grow: 1; /* Дозволяє контенту займати доступний простір */
+}
+
+.topic-actions {
+  margin-left: 1rem; /* Відступ від контенту теми */
+  flex-shrink: 0; /* Забороняє кнопці стискатися */
+}
+
+.delete-topic-btn {
+  background-color: #dc3545; /* Червоний */
+  color: white;
+  border: 1px solid #c82333;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+.delete-topic-btn:hover {
+  background-color: #c82333;
+}
