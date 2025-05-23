@@ -20,7 +20,7 @@ WebMeteo/
 │   └── vite.config.js
 │
 ├── server/                     # Backend (Node.js/Express додаток)
-│   ├── data/                   # JSON "база даних" (users.json, topics.json, posts.json)
+│   ├── data/                   # JSON файли зберігання даних (users.json, topics.json, posts.json)
 │   ├── middleware/             # Проміжні обробники Express (authMiddleware.js)
 │   ├── routes/                 # Обробники маршрутів API (authRoutes.js, analyticsRoutes.js)
 │   ├── uploads/                # Папка для завантажених користувачами файлів (в .gitignore)
